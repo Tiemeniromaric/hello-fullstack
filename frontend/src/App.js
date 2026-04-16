@@ -4,7 +4,7 @@ function App() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/messages")
+    fetch("http://54.87.168.21:5000/messages")
       .then((res) => res.json())
       .then((data) => setMessages(data))
       .catch((err) => console.log(err));
