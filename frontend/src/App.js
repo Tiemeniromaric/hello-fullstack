@@ -18,7 +18,7 @@ function App() {
 
       <ul>
         {messages.map((msg) => (
-          <li key={msg.id}>{msg.text}</li>
+          <li key={msg.id}>{msg.message}</li>
         ))}
       </ul>
     </div>
