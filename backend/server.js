@@ -4,6 +4,7 @@ const cors = require("cors");
 
 const app = express();
 app.use(cors());
+const port = 5000;
 
 // 1. Create MySQL connection
 const db = mysql.createConnection({
@@ -11,6 +12,7 @@ const db = mysql.createConnection({
   user: "root",
   password: "cis233", // put your MySQL password if you have one
   database: "hello_db",
+  port:3306,
 });
 
 // 2. Connect to DB
@@ -34,6 +36,6 @@ app.get("/messages", (req, res) => {
 });
 
 // 4. Start server
-app.listen(5000, () => {
-  console.log("Backend running on http://localhost:5000");
+app.listen(port, () => {
+  console.log("Backend running on http://localhost:${port}");
 });
